@@ -124,7 +124,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
 async function fetchRates() {
   try {
     var myHeaders = new Headers();
-    myHeaders.append("x-access-token", "goldapi-1a3qysm1qdyfur-io");
+    myHeaders.append("x-access-token", "goldapi-d5rpivsm1xokfi4-io");
     myHeaders.append("Content-Type", "application/json");
 
     var requestOptions = {
