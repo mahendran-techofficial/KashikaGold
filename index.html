@@ -15,17 +15,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -35,38 +34,33 @@
 </head>
 
 <body>
-
     <!-- Spinner Start -->
     <div id="spinner"
         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
+        <div class="spinner"></div>
     </div>
     <!-- Spinner End -->
 
 
     <!-- Topbar Start -->
-    <div class="container-fluid px-5 d-none d-lg-block topbar">
-        <div class="row gx-0 align-items-center" style="height: 45px;">
-            <div class="col-lg-8 text-center text-lg-start mb-lg-0">
-                <div class="d-flex flex-wrap">
-                    <a href="#" class="text-light me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+91 6916
-                        5040</a>
-                    <a href="#" class="text-light me-0"><i
-                            class="fas fa-envelope text-primary me-2"></i>Customersupport@Kashikagold.Com</a>
+    <div class="container-fluid topbar px-5 d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+91 9169165040</small>
+                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>support@Kashikagold.Com</small>
                 </div>
             </div>
             <div class="col-lg-4 text-center text-lg-end">
-                <div class="d-flex align-items-center justify-content-end">
-                    <a href="#" class="btn btn-light btn-square border rounded-circle nav-fill me-3"><i
-                            class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="btn btn-light btn-square border rounded-circle nav-fill me-3"><i
-                            class="fab fa-twitter"></i></a>
-                    <a href="#" class="btn btn-light btn-square border rounded-circle nav-fill me-3"><i
-                            class="fab fa-instagram"></i></a>
-                    <a href="#" class="btn btn-light btn-square border rounded-circle nav-fill me-0"><i
-                            class="fab fa-linkedin-in"></i></a>
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" target="_blank"
+                        href="https://www.facebook.com/share/F7sjevYFRkVPekVC/"><i
+                            class="fab fa-facebook-f fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" target="_blank"
+                        href="https://www.instagram.com/kashikagoldcompany?igsh=cmp4cHZiNnI3ZjN0"><i
+                            class="fab fa-instagram fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" target="_blank"
+                        href="https://wa.me/9169165040/"><i class="fab fa-whatsapp fw-normal"></i></a>
                 </div>
             </div>
         </div>
@@ -74,12 +68,12 @@
     <!-- Topbar End -->
 
 
-    <!-- Navbar & Hero Start -->
+    <!-- Navbar & Carousel Start -->
     <div class="container-fluid position-relative p-0">
-        <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
+        <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
             <a href="index.html" class="navbar-brand p-0">
-                <!-- <h1 class="text-primary m-0"><i class="fas fa-star-of-life me-3"></i>Kashika Gold</h1> -->
-                <img src="img/kashikalogo.png" alt="Logo">
+                <img src="img/kashikalogo.png" class="logo" alt="Logo">
+                <!-- <h1 class="m-0"><i class="fa fa-user-tie me-2"></i>Startup</h1> -->
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
@@ -90,121 +84,197 @@
                     <a href="about.html" class="nav-item nav-link">About</a>
                     <a href="service.html" class="nav-item nav-link">Services</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Selling Procedure</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Selling Procedures</a>
                         <div class="dropdown-menu m-0">
-                            <a href="appointment.html" class="dropdown-item">Sell Gold</a>
-                            <a href="feature.html" class="dropdown-item">Sell Silver</a>
-                            <a href="blog.html" class="dropdown-item">Sell Diamond</a>
-                            <a href="team.html" class="dropdown-item">Payment Method</a>
+                            <a href="blog.html" class="dropdown-item">Sell Gold</a>
+                            <a href="detail.html" class="dropdown-item">Sell Silver</a>
+                            <a href="detail.html" class="dropdown-item">Sell Diamond</a>
+                            <a href="detail.html" class="dropdown-item">Payment Method</a>
                         </div>
                     </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
-                <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 flex-wrap flex-sm-shrink-0">Sell
-                    Your Jewel</a>
             </div>
         </nav>
 
+        <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="img/carousel-1.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h1 class="display-1 carasoleheading text-white mb-md-4 animated zoomIn">WELCOME TO KASHIKA
+                                GOLD</h1>
+                            <p class="text-white mb-3 animated slideInDown">We provide instant cash for your gold right
+                                from the comfort of your home. Get the best value with minimal hassle.
+                            <p>
+                                <a href="about.html"
+                                    class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Know More</a>
+                                <!-- <a href="" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contact Us</a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="img/carousel-3.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h1 class="display-1 carasoleheading text-white text-uppercase mb-md-4 animated zoomIn">Get
+                                Instant Cash</h1>
+                            <p class="text-white mb-3 animated slideInDown">Turn your gold into cash for your business
+                                needs without the burden of a
+                                loan. Kashika Gold is here to help you secure the funds you need.
+                            <p>
+                                <a href="about.html"
+                                    class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Know More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <!-- Navbar & Carousel End -->
 
-        <!-- Carousel Start -->
-        <div class="header-carousel owl-carousel">
-            <!-- First Slide -->
-            <div class="header-carousel-item">
-                <img src="img/goldcarasole.jpg" class="img-fluid w-100" alt="Image">
-                <div class="carousel-caption">
-                    <div class="carousel-caption-content p-3">
-                        <h5 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">WE GIVE THE BEST
-                            VALUE</h5>
-                        <h1 class="display-1 text-capitalize text-white mb-4">Sell Your Gold At Home</h1>
-                        <p class="mb-5 fs-5">Kashika Gold provides instant cash for your gold right from the comfort of
-                            your home. Get the best value with minimal hassle.</p>
-                        <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#">Sell Your Gold Now</a>
+    <!-- Facts Start -->
+    <div id="factssection" class="container-fluid facts py-5 pt-lg-0">
+        <div class="container py-5 pt-lg-0">
+            <div class="row gx-0">
+                <!-- Gold Rate -->
+                <div class="col-lg-4 wow zoomIn" data-wow-delay="0.1s">
+                    <div class="bg-secondary shadow d-flex align-items-center justify-content-center p-4"
+                        style="height: 150px;">
+                        <div
+                            class="factsimgborder rounded-circle d-flex align-items-center justify-content-center mb-2">
+                            <img src="./img/gold-8218390_1280.jpg" alt="Gold" class="rounded-circle factsimg">
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="text-white mb-0">Gold Rate (24k)</h5>
+                            <h1 class="text-white mb-0" id="goldRate">Loading...</h1>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- Second Slide -->
-            <div class="header-carousel-item">
-                <img src="img/goldloan.jpg" class="img-fluid w-100" alt="Image">
-                <div class="carousel-caption">
-                    <div class="carousel-caption-content p-3">
-                        <h5 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">WE HELP FUND
-                            YOUR BUSINESS</h5>
-                        <h1 class="display-1 text-capitalize text-white mb-4">Instant Cash for Your Gold</h1>
-                        <p class="mb-5 fs-5">Turn your gold into cash for your business needs without the burden of a
-                            loan. Kashika Gold is here to help you secure the funds you need.</p>
-                        <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#">Sell Now</a>
+
+                <!-- WhatsApp Live Chat -->
+                <div class="col-lg-4 wow zoomIn" data-wow-delay="0.6s">
+                    <div class="bg-light shadow d-flex align-items-center justify-content-center p-4 whatsapp-chat-card"
+                        style="height: 150px; cursor: pointer;">
+                        <div class="d-flex align-items-center justify-content-center mb-2">
+                            <img src="./img/whatsapplogo.png" alt="WhatsApp" class="factsimg">
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="text-dark mb-0">Live Chat Support</h5>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- Third Slide -->
-            <div class="header-carousel-item">
-                <img src="img/goldcarasole1.jpg" class="img-fluid w-100" alt="Image">
-                <div class="carousel-caption">
-                    <div class="carousel-caption-content p-3">
-                        <h5 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">GOLD FOR
-                            PURSUING HIGHER EDUCATION</h5>
-                        <h1 class="display-1 text-capitalize text-white mb-4">Secure Your Future with Kashika Gold</h1>
-                        <p class="mb-5 fs-5">Need funds for education? Sell your gold and invest in a brighter future.
-                            Kashika Gold provides maximum value with instant cash.</p>
-                        <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#">Get Instant Cash</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Fourth Slide -->
-            <div class="header-carousel-item">
-                <img src="img/goldcarasole2.jpg" class="img-fluid w-100" alt="Image">
-                <div class="carousel-caption">
-                    <div class="carousel-caption-content p-3">
-                        <h5 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">GIVE YOUR FAMILY
-                            THE HAPPINESS THEY DESERVE</h5>
-                        <h1 class="display-1 text-capitalize text-white mb-4">Trade Gold for a Better Life</h1>
-                        <p class="mb-5 fs-5">Provide for your family by selling your gold at the best rate. Kashika Gold
-                            ensures a fair and transparent process with instant cash offers.</p>
-                        <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#">Learn More</a>
+
+                <!-- Silver Rate -->
+                <div class="col-lg-4 wow zoomIn" data-wow-delay="0.3s">
+                    <div class="bg-secondary shadow d-flex align-items-center justify-content-center p-4"
+                        style="height: 150px;">
+                        <div
+                            class="factsimgborder rounded-circle d-flex align-items-center justify-content-center mb-2">
+                            <img src="./img/360_F_149724057_bWMZ0eQ97uvf7OsYdYvilCzrTjuxJXBl.jpg" alt="Silver" class="rounded-circle factsimg">
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="text-white mb-0">Silver Rate (₹/kg)</h5>
+                            <h1 class="mb-0 text-white" id="silverRate">Loading...</h1>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Carousel End -->
-
     </div>
-    <!-- Navbar & Hero End -->
+
+    <!-- Chatbot Container -->
+    <div id="chatbotContainer" class="chatbot-container">
+        <div class="chatbot-header">
+            <h5>WhatsApp Chatbot</h5>
+            <button id="closeChatbot" class="btn-close">×</button>
+        </div>
+        <div class="chatbot-body" id="chatbotBody">
+            <!-- Welcome message and today's gold rate -->
+            <div class="message bot-message">
+                Welcome to Kashika Gold! We are here to help you.
+            </div>
+            <div class="message bot-message">
+                Today's Gold Rate (24k): <span id="goldratebot"></span>
+            </div>
+
+            <!-- Predefined questions as user messages on the right -->
+            <div id="predefinedQuestions">
+                <div class="message user-message clickable" data-question="I Want To Sell My Gold">
+                    I Want To Sell My Gold
+                </div>
+                <div class="message user-message clickable" data-question="I Want To Release My Pledged Gold">
+                    I Want To Release My Pledged Gold
+                </div>
+                <div class="message user-message clickable" data-question="Other Enquiry">
+                    Other Enquiry
+                </div>
+            </div>
+        </div>
+        <div class="chatbot-footer">
+            <input type="text" id="userInput" class="form-control" placeholder="Type your question..." />
+            <button id="sendMessage" class="btn btn-success">Send</button>
+        </div>
+    </div>
+
+
+    <!-- Facts End -->
+
 
     <!-- About Start -->
-    <div class="container-fluid about bg-light py-5">
+    <div id="aboutsection" class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.2s">
-                    <div class="about-img pb-5 ps-5">
-                        <img src="img/aboutkashika.jpg" class="img-fluid rounded w-100" style="object-fit: cover;"
-                            alt="Image">
-                        <div class="about-img-inner">
-                            <img src="img/aboutkashikasmall.jpg" class="img-fluid rounded-circle w-100 h-100"
-                                alt="Image">
-                        </div>
-                        <div class="about-experience">Trusted Gold Buyers</div>
+            <div class="row g-5">
+                <div class="col-lg-7">
+                    <div class="section-title position-relative pb-3 mb-5">
+                        <h5 class="fw-bold text-primary text-uppercase">About Us</h5>
+                        <h1 class="mb-0 aboutheading">We Provide Trusted Gold and Jewelry Services With 4 Years of
+                            Experience</h1>
                     </div>
-                </div>
-                <div class="col-lg-7 wow fadeInRight" data-wow-delay="0.4s">
-                    <div class="section-title text-start mb-5">
-                        <h4 class="sub-title pe-3 mb-0">About Us</h4>
-                        <h1 class="display-3 mb-4">We Provide Trusted Gold and Jewelry Services</h1>
-                        <p class="mb-4">Kashika GOLD Private Limited, established in 2020, is a trusted gold buyer in
-                            Chennai, offering transparent
-                            and reliable service. We buy gold and silver jewelry, providing instant cash at today’s
-                            market price, and assist in
-                            releasing pledged gold. Our secure environment ensures a quick, hassle-free process.
-                            Renowned for customer
-                            satisfaction, we strive to offer the best value for your gold.</p>
-                        <div class="mb-4">
-                            <p class="text-secondary"><i class="fa fa-check text-primary me-2"></i> Instant cash for
-                                gold with minimal paperwork.</p>
-                            <p class="text-secondary"><i class="fa fa-check text-primary me-2"></i> Transparent and
-                                secure process.</p>
-                            <p class="text-secondary"><i class="fa fa-check text-primary me-2"></i> Assistance in
-                                releasing pledged gold.</p>
+                    <p class="mb-4">Kashika Gold Private Limited, established in 2020, is a trusted gold buyer in
+                        Chennai, offering transparent
+                        and reliable service. We buy gold and silver jewelry, providing instant cash at today’s
+                        market price, and assist in
+                        releasing pledged gold. Our secure environment ensures a quick, hassle-free process.
+                        Renowned for customer
+                        satisfaction, we strive to offer the best value for your gold.</p>
+                    <div class="row g-0 mb-3 features">
+                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
+                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Instant cash for Gold.</h5>
+                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Transparent and secure
+                                process.</h5>
                         </div>
-                        <a href="#" class="btn btn-primary rounded-pill text-white py-3 px-5">Discover More</a>
+                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
+                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Accurate valuation.</h5>
+                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Pledged gold release.</h5>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.6s">
+                        <div class="bg-primary d-flex align-items-center justify-content-center rounded"
+                            style="width: 60px; height: 60px;">
+                            <i class="fa fa-phone-alt text-white"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="mb-2">Call to ask any question</h5>
+                            <h4 class="text-primary mb-0">+91 91691 65040</h4>
+                        </div>
+                    </div>
+                    <a href="about.html" class="btn btn-primary py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">View
+                        More</a>
+                </div>
+                <div class="col-lg-5" style="min-height: 500px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s"
+                            src="img/aboutkashika.jpg" style="object-fit: cover;">
                     </div>
                 </div>
             </div>
@@ -213,16 +283,93 @@
     <!-- About End -->
 
 
-    <!-- Services Start -->
-    <div class="container-fluid service py-5">
+    <!-- Features Start -->
+    <div id="featuressection" class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
-            <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.2s">
-                <div class="sub-style">
-                    <h4 class="sub-title px-3 mb-0">What We Do</h4>
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-primary text-uppercase">Why Choose Us</h5>
+                <h1 class="mb-0 featuresheading">We Are Here to Unlock the True Value of Your Gold</h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <div class="row g-5 featureslist">
+                        <div class="col-12 wow zoomIn" data-wow-delay="0.2s">
+                            <div class="bgfeature rounded d-flex align-items-center justify-content-center mb-3"
+                                style="width: 60px; height: 60px;">
+                                <i class="fa fa-coins text-white"></i>
+                            </div>
+                            <h4>Trusted Gold Buyer</h4>
+                            <p class="mb-0">Kashika Gold is India’s leading gold buying company, ensuring the best value
+                                for your gold.</p>
+                        </div>
+                        <div class="col-12 wow zoomIn" data-wow-delay="0.6s">
+                            <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
+                                style="width: 60px; height: 60px;">
+                                <i class="fa fa-money-bill-wave text-white"></i>
+                            </div>
+                            <h4>Instant Cash for Gold</h4>
+                            <p class="mb-0">Get spot cash for your gold without any hassles and secure the funds you
+                                need.</p>
+                        </div>
+                        <div class="col-12 wow zoomIn" data-wow-delay="0.6s">
+                            <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
+                                style="width: 60px; height: 60px;">
+                                <i class="fa fa-shield-alt text-white"></i>
+                            </div>
+                            <h4>Trusted & Transparent</h4>
+                            <p class="mb-0">Transparent transactions with advanced testing for the best gold deals.</p>
+                        </div>
+                    </div>
                 </div>
-                <h1 class="display-3 mb-4">Our Services for Precious Metals and Jewelry</h1>
-                <p class="mb-0">We offer reliable and instant services for buying and selling precious metals, diamonds,
-                    and silver. We also help in releasing pledged gold with quick cash valuations.</p>
+                <div class="col-lg-4  wow zoomIn" data-wow-delay="0.9s" style="min-height: 350px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.1s"
+                            src="img/feature.jpg" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="row g-5 featureslist">
+                        <div class="col-12 wow zoomIn" data-wow-delay="0.4s">
+                            <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
+                                style="width: 60px; height: 60px;">
+                                <i class="fa fa-hand-holding-usd text-white"></i>
+                            </div>
+                            <h4>Best Value Guarantee</h4>
+                            <p class="mb-0">We offer the highest market value for your gold with transparent pricing and
+                                no hidden fees.</p>
+                        </div>
+                        <div class="col-12 wow zoomIn" data-wow-delay="0.8s">
+                            <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
+                                style="width: 60px; height: 60px;">
+                                <i class="fa fa-file-contract text-white"></i>
+                            </div>
+                            <h4>Hassle-Free Documentation</h4>
+                            <p class="mb-0">Our process is straightforward, ensuring you get your money with minimal
+                                documentation.</p>
+                        </div>
+                        <div class="col-12 wow zoomIn" data-wow-delay="0.8s">
+                            <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
+                                style="width: 60px; height: 60px;">
+                                <i class="fa fa-smile-beam text-white"></i>
+                            </div>
+                            <h4>Customer-Centric Approach</h4>
+                            <p class="mb-0">We believe in providing excellent customer service to meet the diverse needs
+                                of our clients.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Features Start -->
+
+
+    <!-- Service Start -->
+    <div id="servicesection" class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-primary text-uppercase">Our Services</h5>
+                <h1 class="mb-0 serviceheading">Trusted Experts in Gold, Silver, and Diamond Services</h1>
             </div>
             <div class="row g-4 justify-content-center">
                 <!-- 1st Service -->
@@ -292,540 +439,135 @@
             </div>
         </div>
     </div>
-    <!-- Services End -->
+    <!-- Service End -->
 
-    <!-- Feature Start -->
-    <div class="container-fluid feature py-5">
+    <!-- Testimonial Start -->
+    <div id="testimonialsection" class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
-            <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="sub-style">
-                    <h4 class="sub-title px-3 mb-0">Why Choose Us</h4>
-                </div>
-                <h1 class="display-3 mb-4">Get Instant Cash for Your Gold</h1>
-                <p class="mb-0">Kashika Gold Private Limited is a trusted name in India’s gold buying market, offering
-                    the best value for your gold with a guarantee of instant cash to fulfill your dreams.</p>
+            <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-primary text-uppercase">Testimonial</h5>
+                <h1 class="mb-0 testimonialsheading">What Our Clients Say About Their Experience</h1>
             </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="row-cols-1 feature-item p-4">
-                        <div class="col-12">
-                            <div class="feature-icon mb-4">
-                                <div class="p-3 d-inline-flex bg-white rounded">
-                                    <i class="fas fa-coins fa-4x text-primary"></i>
-                                </div>
-                            </div>
-                            <div class="feature-content d-flex flex-column">
-                                <h5 class="mb-4">Trusted Gold Buyer</h5>
-                                <p class="mb-0">Kashika Gold is India’s leading gold buying company, ensuring the best
-                                    value for your gold.</p>
-                            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.6s">
+                <div class="testimonial-item bg-light my-4">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                        <img class="img-fluid rounded" src="img/Ameer.png" style="width: 60px; height: 60px;">
+                        <div class="ps-4">
+                            <h4 class="text-primary mb-1">Ameer afridi</h4>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="row-cols-1 feature-item p-4">
-                        <div class="col-12">
-                            <div class="feature-icon mb-4">
-                                <div class="p-3 d-inline-flex bg-white rounded">
-                                    <i class="fas fa-money-bill-wave fa-4x text-primary"></i>
-                                </div>
-                            </div>
-                            <div class="feature-content d-flex flex-column">
-                                <h5 class="mb-4">Instant Cash for Gold</h5>
-                                <p class="mb-0">Get spot cash for your gold without any hassles and secure the funds you
-                                    need.</p>
-                            </div>
-                        </div>
+                    <div class="reviewdiv pt-4 pb-5 px-5">
+                        Sell ur gold at best rate in this shop..! People’s are good matured to co operate with
+                        customers.
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="row-cols-1 feature-item p-4">
-                        <div class="col-12">
-                            <div class="feature-icon mb-4">
-                                <div class="p-3 d-inline-flex bg-white rounded">
-                                    <i class="fas fa-file-contract fa-4x text-primary"></i>
-                                </div>
-                            </div>
-                            <div class="feature-content d-flex flex-column">
-                                <h5 class="mb-4">Hassle-Free Documentation</h5>
-                                <p class="mb-0">Our process is straightforward, ensuring you get your money with minimal
-                                    documentation.</p>
-                            </div>
+                <div class="testimonial-item bg-light my-4">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                        <img class="img-fluid rounded" src="img/sachinvenkat.png" style="width: 60px; height: 60px;">
+                        <div class="ps-4">
+                            <h4 class="text-primary mb-1">Sachin Venkat</h4>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="row-cols-1 feature-item p-4">
-                        <div class="col-12">
-                            <div class="feature-icon mb-4">
-                                <div class="p-3 d-inline-flex bg-white rounded">
-                                    <i class="fas fa-hand-holding-usd fa-4x text-primary"></i>
-                                </div>
-                            </div>
-                            <div class="feature-content d-flex flex-column">
-                                <h5 class="mb-4">Best Value Guarantee</h5>
-                                <p class="mb-0">We offer the highest market value for your gold with transparent pricing
-                                    and no hidden fees.</p>
-                            </div>
-                        </div>
+                    <div class="reviewdiv pt-4 pb-5 px-5">
+                        Very good price given to sell my gold for cash, Hassle free service, genuine gold buyer.
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="row-cols-1 feature-item p-4">
-                        <div class="col-12">
-                            <div class="feature-icon mb-4">
-                                <div class="p-3 d-inline-flex bg-white rounded">
-                                    <i class="fas fa-smile-beam fa-4x text-primary"></i>
-                                </div>
-                            </div>
-                            <div class="feature-content d-flex flex-column">
-                                <h5 class="mb-4 featureheading">Customer-Centric Approach</h5>
-                                <p class="mb-0">We believe in providing excellent customer service to meet the diverse
-                                    needs of our clients.</p>
-                            </div>
+                <div class="testimonial-item bg-light my-4">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                        <img class="img-fluid rounded" src="img/Dasaradhan.png" style="width: 60px; height: 60px;">
+                        <div class="ps-4">
+                            <h4 class="text-primary mb-1">Dasaradan sathish</h4>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="row-cols-1 feature-item p-4">
-                        <div class="col-12">
-                            <div class="feature-icon mb-4">
-                                <div class="p-3 d-inline-flex bg-white rounded">
-                                    <i class="fas fa-medal fa-4x text-primary"></i>
-                                </div>
-                            </div>
-                            <div class="feature-content d-flex flex-column">
-                                <h5 class="mb-4">Personal Expertise</h5>
-                                <p class="mb-0">Years of trusted experience ensuring the best value for your gold.</p>
-                            </div>
-                        </div>
+                    <div class="reviewdiv pt-4 pb-5 px-5">
+                        Value the gold right method and quick time. Reasonable rate happy to visit i suggest to others.
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="row-cols-1 feature-item p-4">
-                        <div class="col-12">
-                            <div class="feature-icon mb-4">
-                                <div class="p-3 d-inline-flex bg-white rounded">
-                                    <i class="fas fa-balance-scale fa-4x text-primary"></i>
-                                </div>
-                            </div>
-                            <div class="feature-content d-flex flex-column">
-                                <h5 class="mb-4">Transparent Transactions</h5>
-                                <p class="mb-0">We maintain full transparency throughout the process, ensuring trust and
-                                    satisfaction.</p>
-                            </div>
+                <div class="testimonial-item bg-light my-4">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                        <img class="img-fluid rounded" src="img/Veeraparathan.png" style="width: 60px; height: 60px;">
+                        <div class="ps-4">
+                            <h4 class="text-primary mb-1">Veerapathran Kalidoss</h4>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="row-cols-1 feature-item p-4">
-                        <div class="col-12">
-                            <div class="feature-icon mb-4">
-                                <div class="p-3 d-inline-flex bg-white rounded">
-                                    <i class="fas fa-ban fa-4x text-primary"></i>
-                                </div>
-                            </div>
-                            <div class="feature-content d-flex flex-column">
-                                <h5 class="mb-4">No Hidden Charges</h5>
-                                <p class="mb-0">With Kashika Gold, you can be assured of a fair price without any hidden
-                                    costs or fees.</p>
-                            </div>
-                        </div>
+                    <div class="reviewdiv pt-4 pb-5 px-5">
+                        Best price for my gold and staffs behaviours are good.
                     </div>
-                </div>
-                <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.2s">
-                    <a href="#" class="btn btn-primary rounded-pill text-white py-3 px-5">More Details</a>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Feature End -->
+    <!-- Testimonial End -->
 
-
-    <!-- Book Appointment Start -->
-    <div class="container-fluid appointment py-5">
+    <!-- Quote Start -->
+    <div id="quotesection" class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2">
-                    <div class="section-title text-start">
-                        <h4 class="sub-title pe-3 mb-0">Solutions For Your Problems</h4>
-                        <h1 class="display-4 mb-4">Highest Quality Services With Maximum Value</h1>
-                        <p class="mb-4">We provide expert guidance and secure solutions for all your gold-related needs.
-                            Trust us to offer competitive prices and exceptional services to maximize your gold's value.
-                        </p>
-                        <div class="row g-4">
-                            <div class="col-sm-6">
-                                <div class="d-flex flex-column h-100">
-                                    <div class="mb-4">
-                                        <h5 class="mb-3"><i class="fa fa-check text-primary me-2"></i> Gold Valuation
-                                        </h5>
-                                        <p class="mb-0">Accurate assessments to ensure the true value of your gold
-                                            assets.</p>
-                                    </div>
-                                    <div class="mb-4">
-                                        <h5 class="mb-3"><i class="fa fa-check text-primary me-2"></i> Secure Storage
-                                        </h5>
-                                        <p class="mb-0">Top-notch security and storage solutions for your gold
-                                            investments.</p>
-                                    </div>
-                                    <div class="text-start mb-4">
-                                        <a href="#" class="btn btn-primary rounded-pill text-white py-3 px-5">More
-                                            Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="video h-100">
-                                    <img src="img/video-img.jpg" class="img-fluid rounded w-100 h-100"
-                                        style="object-fit: cover;" alt="">
-                                    <button type="button" class="btn btn-play" data-bs-toggle="modal"
-                                        data-src="https://www.youtube.com/embed/BB-8aKdw4J8?si=iOSUQDpCnXMy6t0H"
-                                        data-bs-target="#videoModal">
-                                        <span></span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.4s">
-                    <div class="appointment-form rounded p-5">
-                        <p class="fs-4 text-uppercase text-primary">Get In Touch</p>
-                        <h1 class="display-5 mb-4">Book a Consultation</h1>
+            <div class="row g-5">
+                <div class="col-lg-5">
+                    <div class=" rounded h-100 d-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.9s">
                         <form>
-                            <div class="row gy-3 gx-4">
-                                <div class="col-xl-6">
-                                    <input type="text"
-                                        class="form-control py-3 border-primary bg-transparent text-white"
-                                        placeholder="First Name">
+                            <div class="row g-3">
+                                <div class="col-xl-12">
+                                    <input type="text" class="form-control bg-light border-0" placeholder="Your Name"
+                                        style="height: 55px;">
                                 </div>
-                                <div class="col-xl-6">
-                                    <input type="email"
-                                        class="form-control py-3 border-primary bg-transparent text-white"
-                                        placeholder="Email">
+                                <div class="col-12">
+                                    <input type="email" class="form-control bg-light border-0" placeholder="Your Email"
+                                        style="height: 55px;">
                                 </div>
-                                <div class="col-xl-6">
-                                    <input type="phone" class="form-control py-3 border-primary bg-transparent"
-                                        placeholder="Phone">
-                                </div>
-                                <div class="col-xl-6">
-                                    <select class="form-select py-3 border-primary bg-transparent"
-                                        aria-label="Default select example">
-                                        <option selected>Your Gender</option>
-                                        <option value="1">Male</option>
-                                        <option value="2">Female</option>
-                                        <option value="3">Others</option>
-                                    </select>
-                                </div>
-                                <div class="col-xl-6">
-                                    <input type="date" class="form-control py-3 border-primary bg-transparent">
-                                </div>
-                                <div class="col-xl-6">
-                                    <select class="form-select py-3 border-primary bg-transparent"
-                                        aria-label="Default select example">
-                                        <option selected>Service Type</option>
-                                        <option value="1">Gold Valuation</option>
-                                        <option value="2">Storage Solutions</option>
-                                        <option value="3">Gold Selling/Buying</option>
+                                <div class="col-12">
+                                    <select class="form-select bg-light border-0" style="height: 55px;">
+                                        <option selected>Select A Service</option>
+                                        <option value="1">Sell Gold</option>
+                                        <option value="2">Sell Silver</option>
+                                        <option value="3">Sell Diamonds</option>
+                                        <option value="4">Gold Buyers</option>
                                     </select>
                                 </div>
                                 <div class="col-12">
-                                    <textarea class="form-control border-primary bg-transparent text-white" name="text"
-                                        id="area-text" cols="30" rows="5" placeholder="Write Comments"></textarea>
+                                    <textarea class="form-control bg-light border-0" rows="3"
+                                        placeholder="Message"></textarea>
                                 </div>
                                 <div class="col-12">
-                                    <button type="button" class="btn btn-primary text-white w-100 py-3 px-5">SUBMIT
-                                        NOW</button>
+                                    <button class="btn btn-dark w-100 py-3" type="submit">Request A Quote</button>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal Video -->
-    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content rounded-0">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Youtube Video</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <!-- 16:9 aspect ratio -->
-                    <div class="ratio ratio-16x9">
-                        <iframe class="embed-responsive-item" src="" id="video" allowfullscreen
-                            allowscriptaccess="always" allow="autoplay"></iframe>
+                <div class="col-lg-7">
+                    <div class="section-title position-relative pb-3 mb-5">
+                        <h5 class="fw-bold text-primary text-uppercase">Request A Quote</h5>
+                        <h1 class="mb-0 quoteheading">Looking to Sell Your Precious Metals? Get a Free Quote Today!</h1>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Book Appointment End -->
-
-
-    <!-- Team Start -->
-    <div class="container-fluid team py-5">
-        <div class="container py-5">
-            <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="sub-style">
-                    <h4 class="sub-title px-3 mb-0">Meet Our Team</h4>
-                </div>
-                <h1 class="display-3 mb-4">Experts in Gold Selling & Valuation</h1>
-                <p class="mb-0">Our team of professionals is dedicated to bringing you the finest quality of gold
-                    products and personalized services. With years of experience in the gold industry, we ensure that
-                    our expertise shines through in every interaction.</p>
-            </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item rounded">
-                        <div class="team-img rounded-top h-100">
-                            <img src="img/team-3.jpg" class="img-fluid rounded-top w-100" alt="">
-                            <div class="team-icon d-flex justify-content-center">
-                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
-                                        class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
-                                        class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
-                                        class="fab fa-instagram"></i></a>
-                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
-                                        class="fab fa-linkedin-in"></i></a>
-                            </div>
+                    <div class="row gx-3">
+                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
+                            <h5 class="mb-4"><i class="fa fa-reply text-primary me-3"></i>Quick Response Within 24 Hours
+                            </h5>
                         </div>
-                        <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
-                            <h5>Full Name</h5>
-                            <p class="mb-0">Role</p>
+                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
+                            <h5 class="mb-4"><i class="fa fa-phone-alt text-primary me-3"></i>24/7 Support for Your
+                                Needs</h5>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item rounded">
-                        <div class="team-img rounded-top h-100">
-                            <img src="img/team-3.jpg" class="img-fluid rounded-top w-100" alt="">
-                            <div class="team-icon d-flex justify-content-center">
-                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
-                                        class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
-                                        class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
-                                        class="fab fa-instagram"></i></a>
-                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
-                                        class="fab fa-linkedin-in"></i></a>
-                            </div>
+                    <p class="mb-4">We are committed to offering you the best value for your gold, silver, and other
+                        precious metals. Our experienced team ensures a fast, secure, and transparent transaction
+                        process.</p>
+                    <div class="d-flex align-items-center mt-2 wow zoomIn" data-wow-delay="0.6s">
+                        <div class="bg-primary d-flex align-items-center justify-content-center rounded"
+                            style="width: 60px; height: 60px;">
+                            <i class="fa fa-phone-alt text-white"></i>
                         </div>
-                        <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
-                            <h5>Full Name</h5>
-                            <p class="mb-0">Role</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item rounded">
-                        <div class="team-img rounded-top h-100">
-                            <img src="img/team-3.jpg" class="img-fluid rounded-top w-100" alt="">
-                            <div class="team-icon d-flex justify-content-center">
-                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
-                                        class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
-                                        class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
-                                        class="fab fa-instagram"></i></a>
-                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
-                                        class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                        <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
-                            <h5>Full Name</h5>
-                            <p class="mb-0">Role</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item rounded">
-                        <div class="team-img rounded-top h-100">
-                            <img src="img/team-3.jpg" class="img-fluid rounded-top w-100" alt="">
-                            <div class="team-icon d-flex justify-content-center">
-                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
-                                        class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
-                                        class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
-                                        class="fab fa-instagram"></i></a>
-                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
-                                        class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                        <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
-                            <h5>Full Name</h5>
-                            <p class="mb-0">Role</p>
+                        <div class="ps-4">
+                            <h5 class="mb-2">Call Us to Get a Quote</h5>
+                            <h4 class="text-primary mb-0">+91 91691 65040</h4>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Team End -->
-
-
-
-    <!-- Testimonial Start -->
-    <!-- <div class="container-fluid testimonial py-5 wow zoomInDown" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="section-title mb-5">
-                <div class="sub-style">
-                    <h4 class="sub-title text-white px-3 mb-0">Testimonial</h4>
-                </div>
-                <h1 class="display-3 mb-4">What Clients are Say</h1>
-            </div>
-            <div class="testimonial-carousel owl-carousel">
-                <div class="testimonial-item">
-                    <div class="testimonial-inner p-5">
-                        <div class="testimonial-inner-img mb-4">
-                            <img src="img/testimonial-img.jpg" class="img-fluid rounded-circle" alt="">
-                        </div>
-                        <p class="text-white fs-7">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores
-                            nemo facilis tempora esse explicabo sed! Dignissimos quia ullam pariatur blanditiis sed
-                            voluptatum. Totam aut quidem laudantium tempora. Minima, saepe earum!
-                        </p>
-                        <div class="text-center">
-                            <h5 class="mb-2">John Abraham</h5>
-                            <p class="mb-2 text-white-50">New York, USA</p>
-                            <div class="d-flex justify-content-center">
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-item">
-                    <div class="testimonial-inner p-5">
-                        <div class="testimonial-inner-img mb-4">
-                            <img src="img/testimonial-img.jpg" class="img-fluid rounded-circle" alt="">
-                        </div>
-                        <p class="text-white fs-7">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores
-                            nemo facilis tempora esse explicabo sed! Dignissimos quia ullam pariatur blanditiis sed
-                            voluptatum. Totam aut quidem laudantium tempora. Minima, saepe earum!
-                        </p>
-                        <div class="text-center">
-                            <h5 class="mb-2">John Abraham</h5>
-                            <p class="mb-2 text-white-50">New York, USA</p>
-                            <div class="d-flex justify-content-center">
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-item">
-                    <div class="testimonial-inner p-5">
-                        <div class="testimonial-inner-img mb-4">
-                            <img src="img/testimonial-img.jpg" class="img-fluid rounded-circle" alt="">
-                        </div>
-                        <p class="text-white fs-7">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores
-                            nemo facilis tempora esse explicabo sed! Dignissimos quia ullam pariatur blanditiis sed
-                            voluptatum. Totam aut quidem laudantium tempora. Minima, saepe earum!
-                        </p>
-                        <div class="text-center">
-                            <h5 class="mb-2">John Abraham</h5>
-                            <p class="mb-2 text-white-50">New York, USA</p>
-                            <div class="d-flex justify-content-center">
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                                <i class="fas fa-star text-secondary"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Testimonial End -->
-
-
-    <!-- Blog Start -->
-    <!-- <div class="container-fluid blog py-5">
-        <div class="container py-5">
-            <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="sub-style">
-                    <h4 class="sub-title px-3 mb-0">Our Blog</h4>
-                </div>
-                <h1 class="display-3 mb-4">Excellent Facility and High Quality Therapy</h1>
-                <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at atque
-                    sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime veniam
-                    necessitatibus saepe in ab? Repellat!</p>
-            </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="blog-item rounded">
-                        <div class="blog-img">
-                            <img src="img/blog-1.jpg" class="img-fluid w-100" alt="Image">
-                        </div>
-                        <div class="blog-centent p-4">
-                            <div class="d-flex justify-content-between mb-4">
-                                <p class="mb-0 text-muted"><i class="fa fa-calendar-alt text-primary"></i> 01 Jan 2045
-                                </p>
-                                <a href="#" class="text-muted"><span class="fa fa-comments text-primary"></span> 3
-                                    Comments</a>
-                            </div>
-                            <a href="#" class="h4">Remove back Pain While Working on o physio</a>
-                            <p class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium hic
-                                consequatur beatae architecto,</p>
-                            <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-1">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="blog-item rounded">
-                        <div class="blog-img">
-                            <img src="img/blog-2.jpg" class="img-fluid w-100" alt="Image">
-                        </div>
-                        <div class="blog-centent p-4">
-                            <div class="d-flex justify-content-between mb-4">
-                                <p class="mb-0 text-muted"><i class="fa fa-calendar-alt text-primary"></i> 01 Jan 2045
-                                </p>
-                                <a href="#" class="text-muted"><span class="fa fa-comments text-primary"></span> 3
-                                    Comments</a>
-                            </div>
-                            <a href="#" class="h4">Benefits of a weekly physiotherapy session</a>
-                            <p class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium hic
-                                consequatur beatae architecto,</p>
-                            <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-1">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="blog-item rounded">
-                        <div class="blog-img">
-                            <img src="img/blog-3.jpg" class="img-fluid w-100" alt="Image">
-                        </div>
-                        <div class="blog-centent p-4">
-                            <div class="d-flex justify-content-between mb-4">
-                                <p class="mb-0 text-muted"><i class="fa fa-calendar-alt text-primary"></i> 01 Jan 2045
-                                </p>
-                                <a href="#" class="text-muted"><span class="fa fa-comments text-primary"></span> 3
-                                    Comments</a>
-                            </div>
-                            <a href="#" class="h4">Regular excercise can slow ageing process</a>
-                            <p class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium hic
-                                consequatur beatae architecto,</p>
-                            <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-1">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Blog End -->
-
+    <!-- Quote End -->
 
     <!-- Footer Start -->
     <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
@@ -833,92 +575,89 @@
             <div class="row g-5">
                 <div class="col-md-6 col-lg-6 col-xl-3">
                     <div class="footer-item d-flex flex-column">
-                        <h4 class="text-white mb-4">Kashika Gold</h4>
-                        <p>Kashika Gold is a trusted leader in providing high-quality gold products. With years of
-                            experience and a commitment to excellence, we offer the finest gold to our customers
-                            worldwide.</p>
-                        <div class="d-flex align-items-center">
-                            <i class="fas fa-share fa-2x text-white me-2"></i>
-                            <a class="btn-square btn btn-primary text-white rounded-circle mx-1" href=""><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a class="btn-square btn btn-primary text-white rounded-circle mx-1" href=""><i
-                                    class="fab fa-twitter"></i></a>
-                            <a class="btn-square btn btn-primary text-white rounded-circle mx-1" href=""><i
-                                    class="fab fa-instagram"></i></a>
-                            <a class="btn-square btn btn-primary text-white rounded-circle mx-1" href=""><i
-                                    class="fab fa-linkedin-in"></i></a>
+                        <div class="footer-item">
+                            <h4 class="footerheadings mb-4">Kashika Gold</h4>
+                            <img src="./img/kashikalogo.png" alt="Company Logo" class="mb-4" style="width: 150px;">
+                            <p class="mb-3">
+                                We are dedicated to providing premium quality gold and jewelry products to our
+                                customers.
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-3">
                     <div class="footer-item d-flex flex-column">
-                        <h4 class="mb-4 text-white">Quick Links</h4>
-                        <a href=""><i class="fas fa-angle-right me-2"></i> About Us</a>
-                        <a href=""><i class="fas fa-angle-right me-2"></i> Contact Us</a>
-                        <a href=""><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
-                        <a href=""><i class="fas fa-angle-right me-2"></i> Terms & Conditions</a>
-                        <a href=""><i class="fas fa-angle-right me-2"></i> Our Team</a>
+                        <h4 class="footerheadings mb-4">Explore</h4>
+                        <a href="#"><i class="fas fa-angle-right me-2"></i> Home</a>
+                        <a href="about.html"><i class="fas fa-angle-right me-2"></i> About Us</a>
+                        <a href="service.html"><i class="fas fa-angle-right me-2"></i> Services</a>
+                        <a href="#"><i class="fas fa-angle-right me-2"></i> Selling Procedures</a>
+                        <a href="contact.html"><i class="fas fa-angle-right me-2"></i> Contact Us</a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-3">
                     <div class="footer-item d-flex flex-column">
-                        <h4 class="mb-4 text-white">Our Services</h4>
-                        <a href=""><i class="fas fa-angle-right me-2"></i> Sell Gold</a>
-                        <a href=""><i class="fas fa-angle-right me-2"></i> Sell Diamond</a>
-                        <a href=""><i class="fas fa-angle-right me-2"></i> Sell Silver</a>
-                        <a href=""><i class="fas fa-angle-right me-2"></i> Gold Buyers</a>
-                        <a href=""><i class="fas fa-angle-right me-2"></i> Diamond Buyers</a>
-                        <a href=""><i class="fas fa-angle-right me-2"></i> Gold Valuation</a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-xl-3">
-                    <div class="footer-item d-flex flex-column">
-                        <h4 class="mb-4 text-white">Contact Info</h4>
-                        <a href=""><i class="fa fa-map-marker-alt me-2"></i>59, Arcot Rd, opposite to Grand Residence,
+                        <h4 class="footerheadings mb-4">Contact Info</h4>
+                        <a href="#"><i class="fa fa-map-marker-alt me-2"></i>59, Arcot Rd, opposite to Grand Residence,
                             Karambakkam, Porur, Chennai, Tamil Nadu 600116</a>
-                        <a class="emailfooter" href=""><i class="fas fa-envelope me-2"></i>
-                            Customersupport@Kashikagold.Com</a>
-                        <a href=""><i class="fas fa-phone me-2"></i> +91 9169165040</a>
-                        <a href="" class="mb-3"><i class="fas fa-phone me-2"></i> 044 4500 8286</a>
+                        <a href="#"><i class="fas fa-envelope me-2"></i> support@kashikagold.com</a>
+                        <a href="#"><i class="fas fa-phone me-2"></i> +91 9169165040</a>
+                        <div class="footericons d-flex align-items-center">
+                            <a class="btn btn-light btn-md-square me-2"
+                               target="_blank" href="https://www.facebook.com/share/F7sjevYFRkVPekVC/"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-light btn-md-square me-2"
+                            target="_blank" href="https://www.instagram.com/kashikagoldcompany?igsh=cmp4cHZiNnI3ZjN0"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a class="btn btn-light btn-md-square me-0" target="_blank" href="https://wa.me/9169165040/"><i
+                                    class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item-post d-flex flex-column">
+                        <h4 class="footerheadings mb-4">Our Services</h4>
+                        <div class="d-flex flex-column mb-3">
+                            <p class="text-uppercase text-primary mb-2">Sell Gold</p>
+                            <a href="#" class="text-white">Get the best rates for your gold with us.</a>
+                        </div>
+                        <div class="d-flex flex-column mb-3">
+                            <p class="text-uppercase text-primary mb-2">Sell Silver</p>
+                            <a href="#" class="text-white">Turn your silver into cash at competitive prices.</a>
+                        </div>
+                        <div class="d-flex flex-column mb-3">
+                            <p class="text-uppercase text-primary mb-2">Sell Diamond</p>
+                            <a href="#" class="text-white">Get top value for your diamonds quickly and easily.</a>
+                        </div>
+                        <div class="footer-btn text-start">
+                            <a href="service.html" class="btn btn-light rounded-pill px-4">Explore All Services <i
+                                    class="fa fa-arrow-right ms-1"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="text-center footerco py-3">
+            &copy; <span id="year"></span> Kashika Gold. All rights reserved.
         </div>
     </div>
     <!-- Footer End -->
 
-    <!-- Copyright Start -->
-    <div class="container-fluid copyright py-4">
-        <div class="container">
-            <div class="row g-4 align-items-center">
-                <div class="col-md-6 text-center text-md-start mb-md-0">
-                    <span class="text-white"><a href="#"><i class="fas fa-copyright text-light me-2"></i>Kashika Gold -
-                            2024</a></span>
-                </div>
-                <div class="col-md-6 text-center text-md-end text-white">
-                    All Rights Reserved. <a class="border-bottom" href=""></a><a class="border-bottom" href=""></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Copyright End -->
-
     <!-- Back to Top -->
-    <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 
     <!-- JavaScript Libraries -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-
 </body>
 
 </html>

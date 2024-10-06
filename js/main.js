@@ -1,129 +1,224 @@
 (function ($) {
-    "use strict";
+  "use strict";
 
-    // Spinner
-    var spinner = function () {
-        setTimeout(function () {
-            if ($('#spinner').length > 0) {
-                $('#spinner').removeClass('show');
-            }
-        }, 1);
-    };
-    spinner(0);
-    
-    
-    // Initiate the wowjs
-    new WOW().init();
+  // Spinner
+  var spinner = function () {
+    setTimeout(function () {
+      if ($("#spinner").length > 0) {
+        $("#spinner").removeClass("show");
+      }
+    }, 1);
+  };
+  spinner();
 
+  // Initiate the wowjs
+  new WOW().init();
 
-    // Sticky Navbar
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 45) {
-            $('.navbar').addClass('sticky-top shadow-sm');
-        } else {
-            $('.navbar').removeClass('sticky-top shadow-sm');
-        }
-    });
-
-
-    // Hero Header carousel
-    $(".header-carousel").owlCarousel({
-        animateOut: 'slideOutDown',
-        items: 1,
-        autoplay: true,
-        smartSpeed: 1000,
-        dots: false,
-        loop: true,
-        nav : true,
-        navText : [
-            '<i class="bi bi-arrow-left"></i>',
-            '<i class="bi bi-arrow-right"></i>'
-        ],
-    });
-
-
-    // International carousel
-    $(".testimonial-carousel").owlCarousel({
-        autoplay: true,
-        items: 1,
-        smartSpeed: 1500,
-        dots: true,
-        loop: true,
-        margin: 25,
-        nav : true,
-        navText : [
-            '<i class="bi bi-arrow-left"></i>',
-            '<i class="bi bi-arrow-right"></i>'
-        ]
-    });
-
-
-    // Modal Video
-    $(document).ready(function () {
-        var $videoSrc;
-        $('.btn-play').click(function () {
-            $videoSrc = $(this).data("src");
-        });
-        console.log($videoSrc);
-
-        $('#videoModal').on('shown.bs.modal', function (e) {
-            $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
-        })
-
-        $('#videoModal').on('hide.bs.modal', function (e) {
-            $("#video").attr('src', $videoSrc);
-        })
-    });
-
-
-    // testimonial carousel
-    $(".testimonial-carousel").owlCarousel({
-        autoplay: true,
-        smartSpeed: 1000,
-        center: true,
-        dots: true,
-        loop: true,
-        margin: 25,
-        nav : true,
-        navText : [
-            '<i class="bi bi-arrow-left"></i>',
-            '<i class="bi bi-arrow-right"></i>'
-        ],
-        responsiveClass: true,
-        responsive: {
-            0:{
-                items:1
-            },
-            576:{
-                items:1
-            },
-            768:{
-                items:1
-            },
-            992:{
-                items:1
-            },
-            1200:{
-                items:1
-            }
-        }
-    });
-
-    
-    
-   // Back to top button
-   $(window).scroll(function () {
-    if ($(this).scrollTop() > 300) {
-        $('.back-to-top').fadeIn('slow');
+  // Sticky Navbar
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 500) {
+      $(".navbar").addClass("sticky-top shadow-sm");
+      $(".logo").addClass("logochange");
     } else {
-        $('.back-to-top').fadeOut('slow');
+      $(".navbar").removeClass("sticky-top shadow-sm");
+      $(".logo").removeClass("logochange");
     }
-    });
-    $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
-        return false;
-    });
+  });
 
+  // Dropdown on mouse hover
+  const $dropdown = $(".dropdown");
+  const $dropdownToggle = $(".dropdown-toggle");
+  const $dropdownMenu = $(".dropdown-menu");
+  const showClass = "show";
 
+  $(window).on("load resize", function () {
+    if (this.matchMedia("(min-width: 992px)").matches) {
+      $dropdown.hover(
+        function () {
+          const $this = $(this);
+          $this.addClass(showClass);
+          $this.find($dropdownToggle).attr("aria-expanded", "true");
+          $this.find($dropdownMenu).addClass(showClass);
+        },
+        function () {
+          const $this = $(this);
+          $this.removeClass(showClass);
+          $this.find($dropdownToggle).attr("aria-expanded", "false");
+          $this.find($dropdownMenu).removeClass(showClass);
+        }
+      );
+    } else {
+      $dropdown.off("mouseenter mouseleave");
+    }
+  });
+
+  // Facts counter
+  $('[data-toggle="counter-up"]').counterUp({
+    delay: 10,
+    time: 2000,
+  });
+
+  // Back to top button
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+      $(".back-to-top").fadeIn("slow");
+    } else {
+      $(".back-to-top").fadeOut("slow");
+    }
+  });
+  $(".back-to-top").click(function () {
+    $("html, body").animate({ scrollTop: 0 }, 1500, "easeInOutExpo");
+    return false;
+  });
+
+  // Testimonials carousel
+  $(".testimonial-carousel").owlCarousel({
+    autoplay: true,
+    smartSpeed: 1500,
+    dots: true,
+    loop: true,
+    center: true,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      576: {
+        items: 1,
+      },
+      768: {
+        items: 2,
+      },
+      992: {
+        items: 3,
+      },
+    },
+  });
+
+  // Vendor carousel
+  $(".vendor-carousel").owlCarousel({
+    loop: true,
+    margin: 45,
+    dots: false,
+    loop: true,
+    autoplay: true,
+    smartSpeed: 1000,
+    responsive: {
+      0: {
+        items: 2,
+      },
+      576: {
+        items: 4,
+      },
+      768: {
+        items: 6,
+      },
+      992: {
+        items: 8,
+      },
+    },
+  });
 })(jQuery);
 
+document.getElementById("year").textContent = new Date().getFullYear();
+// Fetch live rates using the API
+async function fetchRates() {
+  try {
+    var myHeaders = new Headers();
+    myHeaders.append("x-access-token", "goldapi-1a3qysm1qdyfur-io");
+    myHeaders.append("Content-Type", "application/json");
+
+    var requestOptions = {
+      method: "GET",
+      headers: myHeaders,
+      redirect: "follow",
+    };
+
+     const goldRateResponse = await fetch("https://www.goldapi.io/api/XAU/INR", requestOptions);
+
+     if (!goldRateResponse.ok) {
+       throw new Error("Failed to fetch gold rates.");
+     }
+
+     const silverRateResponse = await fetch("https://www.goldapi.io/api/XAG/INR", requestOptions);
+
+     if (!goldRateResponse.ok) {
+       throw new Error("Failed to fetch silver rates.");
+     }
+ 
+     const goldData = await goldRateResponse.json();
+     const silverData = await silverRateResponse.json();
+ 
+
+    document.getElementById("goldRate").textContent = `₹${goldData.price_gram_24k.toFixed(2)}/gram`;
+    document.getElementById("goldratebot").textContent = `₹${goldData.price_gram_24k.toFixed(2)}/gram`;
+    document.getElementById("silverRate").textContent = `₹${silverData.price_gram_24k.toFixed(2)}/gram`;
+
+  } 
+  catch (error) {
+    console.error("Error fetching rates:", error);
+    document.getElementById("goldRate").innerText = "Error";
+    document.getElementById("silverRate").innerText = "Error";
+    document.getElementById("diamondRate").innerText = "Error";
+  }
+}
+
+// Call the function to fetch the rates on page load
+fetchRates();
+
+// Show chatbot when clicking on the WhatsApp card
+document.querySelector('.whatsapp-chat-card').addEventListener('click', function() {
+  document.getElementById('chatbotContainer').style.display = 'flex';
+});
+
+// Close the chatbot
+document.getElementById('closeChatbot').addEventListener('click', function() {
+  document.getElementById('chatbotContainer').style.display = 'none';
+});
+
+// Handle predefined question click
+document.querySelectorAll('.clickable').forEach(function(questionElement) {
+  questionElement.addEventListener('click', function() {
+      const selectedQuestion = this.getAttribute('data-question');
+      addMessage(selectedQuestion, 'user');
+      handleBotResponse(selectedQuestion);
+  });
+});
+
+// Send user message and trigger bot response
+document.getElementById('sendMessage').addEventListener('click', function() {
+  const userMessage = document.getElementById('userInput').value;
+  if (userMessage.trim() === "") return;
+
+  // Add user's message to the chat
+  addMessage(userMessage, 'user');
+
+  // Clear the input field
+  document.getElementById('userInput').value = '';
+
+  // Handle bot response
+  handleBotResponse(userMessage);
+});
+
+// Function to append message to chat window
+function addMessage(message, type) {
+  const messageContainer = document.createElement('div');
+  messageContainer.className = 'message ' + (type === 'user' ? 'user-message' : 'bot-message');
+  messageContainer.textContent = message;
+
+  document.getElementById('chatbotBody').appendChild(messageContainer);
+  document.getElementById('chatbotBody').scrollTop = document.getElementById('chatbotBody').scrollHeight; // Auto-scroll
+}
+
+// Handle bot responses based on predefined questions or user input
+function handleBotResponse(userMessage) {
+  const predefinedResponses = {
+      "I Want To Sell My Gold": "Sure! You can visit our branch or call our sales support.",
+      "I Want To Release My Pledged Gold": "We will guide you through the process. Please provide the pledged details.",
+      "Other Enquiry": "Please describe your enquiry, and we will assist you shortly."
+  };
+
+  let response = predefinedResponses[userMessage];
+
+  // Add bot response to the chat
+  addMessage(response, 'bot');
+}
