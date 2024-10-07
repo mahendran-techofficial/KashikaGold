@@ -253,17 +253,3 @@ function handleBotResponse(userMessage) {
   // Add bot response to the chat
   addMessage(response, 'bot');
 }
-
-
-//Image Change for mobile screen
-window.addEventListener('resize', function () {
-  var image = document.querySelector('.carouselimagefile');
-  if (window.innerWidth <= 767) {
-      image.src = '../img/mobcarosle.jpg';
-  } else {
-      image.src = '../img/carousel-1.jpg';
-  }
-});
-
-// Initial check on page load
-window.dispatchEvent(new Event('resize'));
