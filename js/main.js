@@ -123,47 +123,78 @@ document.getElementById("year").textContent = new Date().getFullYear();
 // Fetch live rates using the API
 async function fetchRates() {
   try {
-    var myHeaders = new Headers();
-    myHeaders.append("x-access-token", "goldapi-d5rpivsm1xokfi4-io");
-    myHeaders.append("Content-Type", "application/json");
+    const today = new Date().toISOString().slice(0, 10); // Get today's date in YYYY-MM-DD format
+    const storedGoldRate = localStorage.getItem("goldRate");
+    const storedSilverRate = localStorage.getItem("silverRate");
+    const storedDate = localStorage.getItem("rateDate");
+    const lastApiHitTime = localStorage.getItem("lastApiHitTime");
 
-    var requestOptions = {
-      method: "GET",
-      headers: myHeaders,
-      redirect: "follow",
-    };
+    // Check if the rates are already stored and are from today
+    if (storedGoldRate && storedSilverRate && storedDate === today) {
+      console.log(`Rates already fetched for today: ${storedDate}`);
+      console.log(`Stored Gold Rate: ${storedGoldRate}`);
+      console.log(`Stored Silver Rate: ${storedSilverRate}`);
+      console.log(`Last API hit time: ${lastApiHitTime}`);
 
-     const goldRateResponse = await fetch("https://www.goldapi.io/api/XAU/INR", requestOptions);
+      document.getElementById("goldRate").textContent = storedGoldRate;
+      document.getElementById("silverRate").textContent = storedSilverRate;
+    } else {
+      console.log(`API hit at: ${new Date().toLocaleString()}`);
 
-     if (!goldRateResponse.ok) {
-       throw new Error("Failed to fetch gold rates.");
-     }
+      // Fetch new rates from the API since the stored rates are not up-to-date
+      var myHeaders = new Headers();
+      myHeaders.append("x-access-token", "goldapi-dllnasm1yn3f33-io");
+      myHeaders.append("Content-Type", "application/json");
 
-     const silverRateResponse = await fetch("https://www.goldapi.io/api/XAG/INR", requestOptions);
+      var requestOptions = {
+        method: "GET",
+        headers: myHeaders,
+        redirect: "follow",
+      };
 
-     if (!goldRateResponse.ok) {
-       throw new Error("Failed to fetch silver rates.");
-     }
- 
-     const goldData = await goldRateResponse.json();
-     const silverData = await silverRateResponse.json();
- 
+      const goldRateResponse = await fetch("https://www.goldapi.io/api/XAU/INR", requestOptions);
+      if (!goldRateResponse.ok) {
+        throw new Error("Failed to fetch gold rates.");
+      }
 
-    document.getElementById("goldRate").textContent = `₹${goldData.price_gram_24k.toFixed(2)}/gram`;
-    document.getElementById("goldratebot").textContent = `₹${goldData.price_gram_24k.toFixed(2)}/gram`;
-    document.getElementById("silverRate").textContent = `₹${silverData.price_gram_24k.toFixed(2)}/gram`;
+      const silverRateResponse = await fetch("https://www.goldapi.io/api/XAG/INR", requestOptions);
+      if (!silverRateResponse.ok) {
+        throw new Error("Failed to fetch silver rates.");
+      }
 
-  } 
-  catch (error) {
+      const goldData = await goldRateResponse.json();
+      const silverData = await silverRateResponse.json();
+
+      const goldRateText = `₹${goldData.price_gram_24k.toFixed(2)}/gram`;
+      const silverRateText = `₹${silverData.price_gram_24k.toFixed(2)}/gram`;
+
+      // Log the fetched rates to the console
+      console.log(`Fetched Gold Rate: ${goldRateText}`);
+      console.log(`Fetched Silver Rate: ${silverRateText}`);
+
+      // Display the rates on the page
+      document.getElementById("goldRate").textContent = goldRateText;
+      document.getElementById("silverRate").textContent = silverRateText;
+
+      // Store the rates, today's date, and the current time in localStorage
+      localStorage.setItem("goldRate", goldRateText);
+      localStorage.setItem("silverRate", silverRateText);
+      localStorage.setItem("rateDate", today);
+      localStorage.setItem("lastApiHitTime", new Date().toLocaleString());
+
+      // Log the storage action to the console
+      console.log(`Rates stored in localStorage on: ${new Date().toLocaleString()}`);
+    }
+  } catch (error) {
     console.error("Error fetching rates:", error);
     document.getElementById("goldRate").innerText = "Error";
     document.getElementById("silverRate").innerText = "Error";
-    document.getElementById("diamondRate").innerText = "Error";
   }
 }
 
 // Call the function to fetch the rates on page load
 fetchRates();
+
 
 // Show chatbot when clicking on the WhatsApp card
 document.querySelector('.whatsapp-chat-card').addEventListener('click', function() {
@@ -222,3 +253,17 @@ function handleBotResponse(userMessage) {
   // Add bot response to the chat
   addMessage(response, 'bot');
 }
+
+
+//Image Change for mobile screen
+window.addEventListener('resize', function () {
+  var image = document.querySelector('.carouselimagefile');
+  if (window.innerWidth <= 767) {
+      image.src = '../img/mobcarosle.jpg';
+  } else {
+      image.src = '../img/carousel-1.jpg';
+  }
+});
+
+// Initial check on page load
+window.dispatchEvent(new Event('resize'));

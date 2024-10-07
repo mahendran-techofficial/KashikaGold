@@ -292,6 +292,12 @@ h6,
     }
 }
 
+@media (max-width: 480px) {
+    .carouselimagefile{
+        src: url(../img/mobcarosle.jpg) !important;
+    }
+}
+
 .carousel-control-prev,
 .carousel-control-next {
     width: 10%;
