@@ -762,7 +762,7 @@ div h5 {
 .back-to-top {
     position: fixed;
     display: none;
-    right: 45px;
+    left: 45px;
     bottom: 45px;
     z-index: 99;
 }
@@ -1243,7 +1243,7 @@ div h5 {
 .fixed-tel {
     position: fixed;
     bottom: 20px;
-    left: 20px;
+    right: 20px;
     width: 60px;
     height: 60px;
     line-height: 60px;
@@ -1257,7 +1257,7 @@ div h5 {
 }
 
 .fixed-tel.visible{
-    left: 20px; /* Visible when scrolled, moves to its position */
+    right: 20px; /* Visible when scrolled, moves to its position */
     opacity: 1;
     visibility: visible;
 }
