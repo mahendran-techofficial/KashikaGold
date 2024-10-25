@@ -41,6 +41,12 @@
     </div>
     <!-- Spinner End -->
 
+    <!-- Sticky Button Start -->
+    <a class="fixed-tel fixed-whatsapp" href="https://wa.me/9169165040/" target="_blank" title="Chat on Whatsapp"><i
+            class="fab fa-whatsapp fw-normal"></i></a>
+    <a class="fixed-tel" href="tel:+91 9169165040" target="_blank" title="Call Now"><i class="fas fa-phone-alt"></i></a>
+    <!-- Sticky Button End -->
+
 
     <!-- Topbar Start -->
     <div class="container-fluid topbar px-5 d-none d-lg-block">
@@ -86,10 +92,9 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Selling Procedures</a>
                         <div class="dropdown-menu m-0">
-                            <a href="blog.html" class="dropdown-item">Sell Gold</a>
-                            <a href="detail.html" class="dropdown-item">Sell Silver</a>
-                            <a href="detail.html" class="dropdown-item">Sell Diamond</a>
-                            <a href="detail.html" class="dropdown-item">Payment Method</a>
+                            <a href="sellgold.html" class="dropdown-item">Sell Gold</a>
+                            <a href="selldiamond.html" class="dropdown-item">Sell Diamond</a>
+                            <a href="sellsilver.html" class="dropdown-item">Sell Silver</a>
                         </div>
                     </div>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
@@ -107,7 +112,7 @@
                                 GOLD</h1>
                             <p class="text-white mb-3 animated slideInDown">We provide instant cash for your gold right
                                 from the comfort of your home. Get the best value with minimal hassle.
-                            <p>
+                            </p>
                                 <a href="about.html"
                                     class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Know More</a>
                                 <!-- <a href="" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contact Us</a> -->
@@ -123,9 +128,37 @@
                             <p class="text-white mb-3 animated slideInDown">Turn your gold into cash for your business
                                 needs without the burden of a
                                 loan. Kashika Gold is here to help you secure the funds you need.
-                            <p>
+                            </p>
                                 <a href="about.html"
                                     class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Know More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100 carouselimagefile" src="img/carousel-4.png" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h1 class="display-1 carasoleheading text-white mb-md-4 animated zoomIn">GOLD FOR PURSUING
+                                HIGHER EDUCATION</h1>
+                            <p class="text-white mb-3 animated slideInDown">Unlock your potential with quick cash from
+                                your gold, empowering your education journey.</p>
+                            <a href="about.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Know
+                                More</a>
+                            <!-- <a href="" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contact Us</a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100 carouselimagefile" src="img/carousel-5.png" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h1 class="display-1 carasoleheading text-white mb-md-4 animated zoomIn">ADVANCED GERMAN XRF
+                                MACHINE</h1>
+                            <p class="text-white mb-3 animated slideInDown">Ensure accurate purity checks without damage
+                                to your valuable items with our state-of-the-art XRF technology.</p>
+                            <a href="about.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Know
+                                More</a>
+                            <!-- <a href="" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contact Us</a> -->
                         </div>
                     </div>
                 </div>
@@ -156,22 +189,25 @@
                         </div>
                         <div class="ps-4">
                             <h5 class="text-white mb-0">Gold Rate (24k)</h5>
-                            <h1 class="text-white mb-0" id="goldRate">Loading...</h1>
+                            <h1 class="text-white mb-0 mt-2" id="goldRate">Loading...</h1>
                         </div>
                     </div>
                 </div>
 
                 <!-- WhatsApp Live Chat -->
                 <div class="col-lg-4 wow zoomIn" data-wow-delay="0.6s">
-                    <div class="bg-light shadow d-flex align-items-center justify-content-center p-4 whatsapp-chat-card"
-                        style="height: 150px; cursor: pointer;">
-                        <div class="d-flex align-items-center justify-content-center mb-2">
-                            <img src="./img/whatsapplogo.png" alt="WhatsApp" class="factsimg">
+                    <a href="https://wa.me/916382706206" target="_blank" class="whatsapp-chat-link"
+                        style="text-decoration: none;">
+                        <div class="bg-light shadow d-flex align-items-center justify-content-center p-4 whatsapp-chat-card"
+                            style="height: 150px; cursor: pointer;">
+                            <div class="d-flex align-items-center justify-content-center mb-2">
+                                <img src="./img/whatsapplogo.png" alt="WhatsApp" class="factsimg">
+                            </div>
+                            <div class="ps-4">
+                                <h5 class="text-dark mb-0">Live Chat Support</h5>
+                            </div>
                         </div>
-                        <div class="ps-4">
-                            <h5 class="text-dark mb-0">Live Chat Support</h5>
-                        </div>
-                    </div>
+                    </a>
                 </div>
 
                 <!-- Silver Rate -->
@@ -180,11 +216,12 @@
                         style="height: 150px;">
                         <div
                             class="factsimgborder rounded-circle d-flex align-items-center justify-content-center mb-2">
-                            <img src="./img/360_F_149724057_bWMZ0eQ97uvf7OsYdYvilCzrTjuxJXBl.jpg" alt="Silver" class="rounded-circle factsimg">
+                            <img src="./img/360_F_149724057_bWMZ0eQ97uvf7OsYdYvilCzrTjuxJXBl.jpg" alt="Silver"
+                                class="rounded-circle factsimg">
                         </div>
                         <div class="ps-4">
                             <h5 class="text-white mb-0">Silver Rate (₹/kg)</h5>
-                            <h1 class="mb-0 text-white" id="silverRate">Loading...</h1>
+                            <h1 class="mb-0 text-white mt-2 mb-0" id="silverRate">Loading...</h1>
                         </div>
                     </div>
                 </div>
@@ -281,6 +318,59 @@
         </div>
     </div>
     <!-- About End -->
+
+    <!-- Countdown Section Start -->
+    <div id="countdownsection" class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-3 col-md-6 col-sm-12 counter-block mb-4">
+                    <div class="counter-block-one">
+                        <div class="inner-box">
+                            <div class="icon-box"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="count-outer count-box">
+                                <span class="count-text" data-speed="3000" data-stop="4">0</span>
+                            </div>
+                            <p>Branches Across Chennai</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 counter-block mb-4">
+                    <div class="counter-block-one">
+                        <div class="inner-box">
+                            <div class="icon-box"><i class="fas fa-handshake"></i></div>
+                            <div class="count-outer count-box">
+                                <span class="count-text" data-speed="3000" data-stop="2.5">0</span><span>k</span>
+                            </div>
+                            <p>Satisfied Clients</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 counter-block mb-4">
+                    <div class="counter-block-one">
+                        <div class="inner-box">
+                            <div class="icon-box"><i class="fas fa-history"></i></div>
+                            <div class="count-outer count-box">
+                                <span class="count-text" data-speed="3000" data-stop="4">0</span><span>+</span>
+                            </div>
+                            <p>Years of Trusted Service</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 counter-block mb-4">
+                    <div class="counter-block-one">
+                        <div class="inner-box">
+                            <div class="icon-box"><i class="fas fa-users"></i></div>
+                            <div class="count-outer count-box">
+                                <span class="count-text" data-speed="3000" data-stop="60">0</span><span>+</span>
+                            </div>
+                            <p>Customers Served Daily</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Countdown Section End -->
 
 
     <!-- Features Start -->
@@ -576,11 +666,14 @@
                 <div class="col-md-6 col-lg-6 col-xl-3">
                     <div class="footer-item d-flex flex-column">
                         <div class="footer-item">
-                            <h4 class="footerheadings mb-4">Kashika Gold</h4>
-                            <img src="./img/kashikalogo.png" alt="Company Logo" class="mb-4" style="width: 150px;">
+                            <h4 class="footerheadings mb-4">Gold Selling Policy</h4>
+                            <!-- <img src="./img/kashikalogo.png" alt="Company Logo" class="mb-4" style="width: 150px;"> -->
                             <p class="mb-3">
-                                We are dedicated to providing premium quality gold and jewelry products to our
-                                customers.
+                                Kashika Gold does not accept stolen, broken, or fake gold. Selling stolen or counterfeit
+                                gold is illegal, and if
+                                detected, both the individual and the items will be reported to the authorities.
+                                Individuals under 21 years old must
+                                provide a written consent letter from a parent or guardian to sell gold.
                             </p>
                         </div>
                     </div>
@@ -603,14 +696,14 @@
                         <a href="#"><i class="fas fa-envelope me-2"></i> support@kashikagold.com</a>
                         <a href="#"><i class="fas fa-phone me-2"></i> +91 9169165040</a>
                         <div class="footericons d-flex align-items-center">
-                            <a class="btn btn-light btn-md-square me-2"
-                               target="_blank" href="https://www.facebook.com/share/F7sjevYFRkVPekVC/"><i
+                            <a class="btn btn-light btn-md-square me-2" target="_blank"
+                                href="https://www.facebook.com/share/F7sjevYFRkVPekVC/"><i
                                     class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-light btn-md-square me-2"
-                            target="_blank" href="https://www.instagram.com/kashikagoldcompany?igsh=cmp4cHZiNnI3ZjN0"><i
+                            <a class="btn btn-light btn-md-square me-2" target="_blank"
+                                href="https://www.instagram.com/kashikagoldcompany?igsh=cmp4cHZiNnI3ZjN0"><i
                                     class="fab fa-instagram"></i></a>
-                            <a class="btn btn-light btn-md-square me-0" target="_blank" href="https://wa.me/9169165040/"><i
-                                    class="fab fa-whatsapp"></i></a>
+                            <a class="btn btn-light btn-md-square me-0" target="_blank"
+                                href="https://wa.me/9169165040/"><i class="fab fa-whatsapp"></i></a>
                         </div>
                     </div>
                 </div>
@@ -618,30 +711,36 @@
                     <div class="footer-item-post d-flex flex-column">
                         <h4 class="footerheadings mb-4">Our Services</h4>
                         <div class="d-flex flex-column mb-3">
-                            <p class="text-uppercase text-primary mb-2">Sell Gold</p>
-                            <a href="#" class="text-white">Get the best rates for your gold with us.</a>
+                            <p class="text-uppercase mb-2"><i class="fas fa-angle-right me-2"></i> Sell Gold</p>
                         </div>
                         <div class="d-flex flex-column mb-3">
-                            <p class="text-uppercase text-primary mb-2">Sell Silver</p>
-                            <a href="#" class="text-white">Turn your silver into cash at competitive prices.</a>
+                            <p class="text-uppercase mb-2"><i class="fas fa-angle-right me-2"></i> Sell Silver</p>
                         </div>
                         <div class="d-flex flex-column mb-3">
-                            <p class="text-uppercase text-primary mb-2">Sell Diamond</p>
-                            <a href="#" class="text-white">Get top value for your diamonds quickly and easily.</a>
+                            <p class="text-uppercase mb-2"><i class="fas fa-angle-right me-2"></i> Sell Diamond</p>
                         </div>
-                        <div class="footer-btn text-start">
-                            <a href="service.html" class="btn btn-light rounded-pill px-4">Explore All Services <i
-                                    class="fa fa-arrow-right ms-1"></i></a>
+                        <div class="d-flex flex-column mb-3">
+                            <p class="text-uppercase mb-2"><i class="fas fa-angle-right me-2"></i> Gold Buyers</p>
+                        </div>
+                        <div class="d-flex flex-column mb-3">
+                            <p class="text-uppercase mb-2"><i class="fas fa-angle-right me-2"></i> Diamond Buyers</p>
+                        </div>
+                        <div class="d-flex flex-column mb-3">
+                            <p class="text-uppercase mb-2"><i class="fas fa-angle-right me-2"></i> Release Pledged Gold
+                            </p>
+                        </div>
+                        <div class="d-flex flex-column mb-3">
+                            <p class="text-uppercase mb-2"><i class="fas fa-angle-right me-2"></i> Gold Valuation</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="text-center footerco py-3">
-            &copy; <span id="year"></span> Kashika Gold. All rights reserved.
-        </div>
     </div>
     <!-- Footer End -->
+    <div class="text-center footerco py-3">
+        &copy; <span id="year"></span> Kashika Gold. All rights reserved.
+    </div>
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>

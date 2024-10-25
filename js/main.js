@@ -25,6 +25,20 @@
     }
   });
 
+  //Whatspp and Call Sticky Icons
+  // window.addEventListener('scroll', function() {
+  //   const telButton = document.querySelector('.fixed-tel');
+  //   const whatsappButton = document.querySelector('.fixed-whatsapp');
+  //   // Show buttons after scrolling 100px
+  //   if (window.scrollY > 100) {
+  //     telButton.classList.add('visible');
+  //     whatsappButton.classList.add('visible');
+  //   } else {
+  //     telButton.classList.remove('visible');
+  //     whatsappButton.classList.remove('visible');
+  //   }
+  // });
+
   // Dropdown on mouse hover
   const $dropdown = $(".dropdown");
   const $dropdownToggle = $(".dropdown-toggle");
@@ -143,7 +157,7 @@ async function fetchRates() {
 
       // Fetch new rates from the API since the stored rates are not up-to-date
       var myHeaders = new Headers();
-      myHeaders.append("x-access-token", "goldapi-dllnasm1yn3f33-io");
+      myHeaders.append("x-access-token", "goldapi-14m617m2o30wur-io");
       myHeaders.append("Content-Type", "application/json");
 
       var requestOptions = {
@@ -196,9 +210,16 @@ async function fetchRates() {
 fetchRates();
 
 
-// Show chatbot when clicking on the WhatsApp card
-document.querySelector('.whatsapp-chat-card').addEventListener('click', function() {
-  document.getElementById('chatbotContainer').style.display = 'flex';
+// Function to show the chatbot and play sound after 2 seconds
+window.addEventListener('load', function () {
+  setTimeout(function () {
+      // Play sound effect
+      var soundEffect = new Audio('./img/achive-sound.mp3'); // Make sure to add the correct path to your sound file
+      //soundEffect.play();
+
+      // Show the chatbot
+      document.getElementById('chatbotContainer').style.display = 'flex';
+  }, 2000); // Delay of 2 seconds
 });
 
 // Close the chatbot
@@ -253,3 +274,46 @@ function handleBotResponse(userMessage) {
   // Add bot response to the chat
   addMessage(response, 'bot');
 }
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const counters = document.querySelectorAll(".count-text");
+
+  const animateCounter = (counter) => {
+      const speed = parseInt(counter.getAttribute("data-speed"));
+      const stop = parseFloat(counter.getAttribute("data-stop"));
+
+      let currentCount = 0;
+      const increment = stop / (speed / 50);
+
+      const counterInterval = setInterval(() => {
+          if (currentCount < stop) {
+              currentCount += increment;
+              counter.innerText = Math.floor(currentCount).toLocaleString();
+          } else {
+              counter.innerText = stop.toLocaleString();
+              clearInterval(counterInterval);
+          }
+      }, 50);
+  };
+
+  const observer = new IntersectionObserver(
+      (entries) => {
+          entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                  // Start the counter animation when the section comes into view
+                  animateCounter(entry.target);
+                  observer.unobserve(entry.target); // Stop observing once the animation starts
+              }
+          });
+      },
+      {
+          threshold: 0.5, // Trigger when at least 50% of the section is in view
+      }
+  );
+
+  counters.forEach((counter) => {
+      observer.observe(counter); // Observe each counter element
+  });
+});
+
