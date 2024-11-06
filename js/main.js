@@ -134,81 +134,6 @@
 })(jQuery);
 
 document.getElementById("year").textContent = new Date().getFullYear();
-// Fetch live rates using the API
-async function fetchRates() {
-  try {
-    const today = new Date().toISOString().slice(0, 10); // Get today's date in YYYY-MM-DD format
-    const storedGoldRate = localStorage.getItem("goldRate");
-    const storedSilverRate = localStorage.getItem("silverRate");
-    const storedDate = localStorage.getItem("rateDate");
-    const lastApiHitTime = localStorage.getItem("lastApiHitTime");
-
-    // Check if the rates are already stored and are from today
-    if (storedGoldRate && storedSilverRate && storedDate === today) {
-      console.log(`Rates already fetched for today: ${storedDate}`);
-      console.log(`Stored Gold Rate: ${storedGoldRate}`);
-      console.log(`Stored Silver Rate: ${storedSilverRate}`);
-      console.log(`Last API hit time: ${lastApiHitTime}`);
-
-      document.getElementById("goldRate").textContent = storedGoldRate;
-      document.getElementById("silverRate").textContent = storedSilverRate;
-    } else {
-      console.log(`API hit at: ${new Date().toLocaleString()}`);
-
-      // Fetch new rates from the API since the stored rates are not up-to-date
-      var myHeaders = new Headers();
-      myHeaders.append("x-access-token", "goldapi-14m617m2o30wur-io");
-      myHeaders.append("Content-Type", "application/json");
-
-      var requestOptions = {
-        method: "GET",
-        headers: myHeaders,
-        redirect: "follow",
-      };
-
-      const goldRateResponse = await fetch("https://www.goldapi.io/api/XAU/INR", requestOptions);
-      if (!goldRateResponse.ok) {
-        throw new Error("Failed to fetch gold rates.");
-      }
-
-      const silverRateResponse = await fetch("https://www.goldapi.io/api/XAG/INR", requestOptions);
-      if (!silverRateResponse.ok) {
-        throw new Error("Failed to fetch silver rates.");
-      }
-
-      const goldData = await goldRateResponse.json();
-      const silverData = await silverRateResponse.json();
-
-      const goldRateText = `₹${goldData.price_gram_24k.toFixed(2)}/gram`;
-      const silverRateText = `₹${silverData.price_gram_24k.toFixed(2)}/gram`;
-
-      // Log the fetched rates to the console
-      console.log(`Fetched Gold Rate: ${goldRateText}`);
-      console.log(`Fetched Silver Rate: ${silverRateText}`);
-
-      // Display the rates on the page
-      document.getElementById("goldRate").textContent = goldRateText;
-      document.getElementById("silverRate").textContent = silverRateText;
-
-      // Store the rates, today's date, and the current time in localStorage
-      localStorage.setItem("goldRate", goldRateText);
-      localStorage.setItem("silverRate", silverRateText);
-      localStorage.setItem("rateDate", today);
-      localStorage.setItem("lastApiHitTime", new Date().toLocaleString());
-
-      // Log the storage action to the console
-      console.log(`Rates stored in localStorage on: ${new Date().toLocaleString()}`);
-    }
-  } catch (error) {
-    console.error("Error fetching rates:", error);
-    document.getElementById("goldRate").innerText = "Error";
-    document.getElementById("silverRate").innerText = "Error";
-  }
-}
-
-// Call the function to fetch the rates on page load
-fetchRates();
-
 
 // Function to show the chatbot and play sound after 2 seconds
 window.addEventListener('load', function () {
@@ -218,7 +143,7 @@ window.addEventListener('load', function () {
       //soundEffect.play();
 
       // Show the chatbot
-      document.getElementById('chatbotContainer').style.display = 'flex';
+      // document.getElementById('chatbotContainer').style.display = 'flex';
   }, 2000); // Delay of 2 seconds
 });
 
@@ -317,3 +242,32 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
+// Show the modal when the page loads
+window.onload = function() {
+  const modal = document.getElementById('quoteModal');
+  const closeBtn = document.getElementById('closeBtn');
+
+  // Show the modal
+  modal.style.display = "block";
+
+  // Close the modal when the close button is clicked
+  closeBtn.onclick = function() {
+      modal.style.display = "none";
+  }
+
+  // Close the modal if the user clicks anywhere outside the modal content
+  window.onclick = function(event) {
+      if (event.target === modal) {
+          modal.style.display = "none";
+      }
+  }
+
+  // Handle the form submission (just a placeholder for now)
+  const form = document.getElementById('quoteForm');
+  form.addEventListener('submit', function(event) {
+      event.preventDefault();  // Prevent page reload
+      alert('Quote request submitted!');
+      modal.style.display = "none";  // Close the modal after submission
+  });
+}

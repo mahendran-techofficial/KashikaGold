@@ -326,7 +326,7 @@ ul.service-single-list i {
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    height: 300px; /* Set a fixed height for the cards */
+    height: 400px; /* Set a fixed height for the cards */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -338,9 +338,14 @@ ul.service-single-list i {
     margin-bottom: 20px;
 }
 
+.procedure-section .procedure-card {
+    height: 300px; /* Set a fixed height for the cards */
+}
+
 .procedure-card h5 {
     font-size: 1.25rem;
     margin-bottom: 10px;
+    margin-top: 20px;
 }
 
 .procedure-card p {
@@ -360,6 +365,28 @@ ul.service-single-list i {
     transform: translateY(-10px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     background: var(--color-secondary);
+}
+
+.procedure-card .image_box .missionimg {
+    content: url('../img/MissionImg.png');
+    transition: content 0.3s ease;
+}
+.procedure-card:hover .image_box .missionimg {
+    content: url('../img/MissionImgWhite.png');
+}
+.procedure-card .image_box .vissionimg {
+    content: url('../img/VisionImg.png');
+    transition: content 0.3s ease;
+}
+.procedure-card:hover .image_box .vissionimg {
+    content: url('../img/VissionImgWhite.png');
+}
+.procedure-card .image_box .valueimg {
+    content: url('../img/ValueImg.png');
+    transition: content 0.3s ease;
+}
+.procedure-card:hover .image_box .valueimg {
+    content: url('../img/ValueImgWhite.png');
 }
 
 .procedure-card:hover .step-title{
@@ -557,10 +584,12 @@ ul.service-single-list i {
 
 
 .terms-section {
-    background: var(--color-bg-light);
     padding: 60px 20px;
     font-family: 'Open Sans', sans-serif;
     color: var(--color-text-dark);
+}
+#terms-section{
+    background: var(--color-bg-light);
 }
 
 .termsheading{
@@ -649,4 +678,155 @@ ul.service-single-list i {
     .terms-section ul {
         font-size: 0.95rem;
     }
+}
+
+/* General styling for the "Features" section */
+.features {
+    padding: 50px 15px;
+}
+#featuressection{
+    background: var(--color-bg-light);
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    color: var(--color-secondary);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.feature-col {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensures uniform height */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-block {
+    padding: 20px;
+    background-color: #fff;
+    flex: 1;
+}
+
+.feature-icon {
+    font-size: 3rem;
+    color: var(--color-primary); /* Orange theme color */
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 1.4rem;
+    color: var(--color-secondary); /* Dark blue color for subheadings */
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #333; /* Dark gray for text */
+    line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .feature-col {
+        margin-bottom: 20px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .features h2 {
+        font-size: 2rem;
+    }
+
+    .card h3 {
+        font-size: 1.25rem;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .feature-icon {
+        font-size: 2.5rem;
+    }
+
+    .features h2 {
+        font-size: 1.75rem;
+    }
+
+    .card h3 {
+        font-size: 1.1rem;
+    }
+
+    .card p {
+        font-size: 0.85rem;
+    }
+}
+
+.feature-image{
+    width: 80%;
+    border-radius: 50%;
+    border: solid 1px var(--color-primary);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.process-section {
+    padding: 20px;
+    line-height: 1.6;
+    background: var(--color-bg-sectionabout);
+    color: var(--color-text-light) !important;
+}
+
+.process-section img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 15px 0;
+}
+
+.process-section h2, .process-section h3 {
+    margin-top: 20px;
+    color: white;
+}
+
+.process-section p {
+    margin-bottom: 15px;
+}
+
+.process-section .terms-list li:before {
+    content: '\2605'; /* Unicode for a star */
+    color: var(--color-primary);
+    font-size: 1.3rem;
+}
+
+.process-section .terms-list li span{
+  color: var(--color-primary);
+  font-weight: 800;
+}
+
+.processheading {
+    color: var(--color-primary);
+}
+
+.process-section .section-title::before{
+background: var(--color-secondary);
 }

@@ -74,6 +74,14 @@ body {
     opacity: 1;
 }
 
+.fab.fa-twitter{
+	font-family:sans-serif;
+}
+.fab.fa-twitter::before{
+	content:"𝕏";
+	font-size:1.2em;
+}
+
 
 /*** Heading ***/
 h1,
@@ -508,6 +516,10 @@ h6,
 
 .aboutheading {
     color: var(--color-text-light);
+    font-size: 1.5rem;
+}
+.aboutbelowheading{
+    font-size: 1rem;
 }
 
 .features div h5 {
@@ -586,6 +598,10 @@ div h5 {
 
 #countdownsection .counter-block-one:hover {
     transform: translateY(-10px);
+    background: var(--color-primary);
+}
+#countdownsection .counter-block-one:hover span {
+    color: var(--color-secondary);
 }
 
 #countdownsection .icon-box {
@@ -867,7 +883,7 @@ div h5 {
 }
 
 .about_us_section .details_box h2 span {
-    color: var(--color-secondary);
+    color: var(--color-primary);
 }
 
 .about_us_section .details_box p {
@@ -884,6 +900,25 @@ div h5 {
     border: none;
     margin-top: 15px;
 }
+.checklist {
+    list-style-type: none;
+    padding-left: 20px;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.checklist .tick {
+    color: var(--color-secondary); 
+    font-weight: 800;
+    padding-right: 0.6rem;
+}
+.checklist li{
+    margin-bottom: 1rem;
+}
+
+.checklist .highlight {
+    color: var(--color-primary);
+}
 
 .about_us_section .details_box a:hover {
     background-color: #007fa4;
@@ -893,6 +928,7 @@ div h5 {
     background: var(--color-bg-light);
     color: var(--color-text-dark);
     padding-bottom: 2rem;
+    padding-top: 2rem;
 }
 
 .heading_container {
@@ -1328,3 +1364,113 @@ div h5 {
 }
 
 
+/* Opening Modal */
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    overflow-y: auto; /* To handle scrolling for small screens */
+    color: var(--color-text-dark);
+}
+
+.modal-content {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 90%; /* Default width for smaller screens */
+    max-width: 500px; /* Max width for larger screens */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* To ensure content does not overflow */
+    border: 1px solid var(--color-primary);
+}
+
+.modal-content h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.modal-content p {
+    font-size: 1em;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.close-btn:hover {
+    border-color: red;
+    background-color: red;
+    color: white;
+}
+
+/* Form Styles */
+.modal-content form label {
+    font-size: 14px;
+    display: block;
+    margin: 5px 0;
+}
+
+.modal-content form input,
+.modal-content form select,
+.modal-content form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.modal-content form button {
+    background-color: var(--color-secondary);
+    display: block;
+    margin: 20px auto;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modal-content form button:hover {
+    background-color: var(--color-primary);
+    color: var(--color-text-dark);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .modal-content {
+        padding: 15px;
+        width: 95%;
+    }
+}
+
+@media (max-width: 400px) {
+    .modal-content {
+        width: 100%;
+    }
+
+    .close-btn {
+        font-size: 20px;
+        padding: 4px;
+    }
+}
