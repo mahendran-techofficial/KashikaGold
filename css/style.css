@@ -74,12 +74,13 @@ body {
     opacity: 1;
 }
 
-.fab.fa-twitter{
-	font-family:sans-serif;
+.fab.fa-twitter {
+    font-family: sans-serif;
 }
-.fab.fa-twitter::before{
-	content:"𝕏";
-	font-size:1.2em;
+
+.fab.fa-twitter::before {
+    content: "𝕏";
+    font-size: 1.2em;
 }
 
 
@@ -168,7 +169,7 @@ h6,
     text-align: center;
 }
 
-.dropdown-menu .active{
+.dropdown-menu .active {
     background-color: var(--color-secondary);
 }
 
@@ -430,7 +431,7 @@ h6,
     border-radius: 20px;
 }
 
-.footerco{
+.footerco {
     background: var(--color-bg-gradient);
     color: var(--color-text-dark);
     font-size: 18px;
@@ -518,7 +519,13 @@ h6,
     color: var(--color-text-light);
     font-size: 1.5rem;
 }
-.aboutbelowheading{
+
+.paymentheading {
+    color: var(--color-secondary);
+    font-size: 1.5rem;
+}
+
+.aboutbelowheading {
     font-size: 1rem;
 }
 
@@ -577,7 +584,8 @@ div h5 {
 
 /* countdown section */
 #countdownsection {
-    background: var(--color-secondary);;
+    background: var(--color-secondary);
+    ;
     background-size: cover;
     background-repeat: repeat;
     padding: 60px 0;
@@ -590,7 +598,7 @@ div h5 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     margin: 15px 0;
     transition: transform 0.3s, box-shadow 0.3s;
-    height: 100%; 
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -600,13 +608,14 @@ div h5 {
     transform: translateY(-10px);
     background: var(--color-primary);
 }
+
 #countdownsection .counter-block-one:hover span {
     color: var(--color-secondary);
 }
 
 #countdownsection .icon-box {
     font-size: 5rem;
-    color: var(--color-secondary); 
+    color: var(--color-secondary);
     margin-bottom: 15px;
 }
 
@@ -900,6 +909,7 @@ div h5 {
     border: none;
     margin-top: 15px;
 }
+
 .checklist {
     list-style-type: none;
     padding-left: 20px;
@@ -908,11 +918,12 @@ div h5 {
 }
 
 .checklist .tick {
-    color: var(--color-secondary); 
+    color: var(--color-secondary);
     font-weight: 800;
     padding-right: 0.6rem;
 }
-.checklist li{
+
+.checklist li {
     margin-bottom: 1rem;
 }
 
@@ -995,22 +1006,26 @@ div h5 {
 
 /* Responsive CSS */
 @media (max-width: 1300px) {
-    #silverRate, #goldRate{
+
+    #silverRate,
+    #goldRate {
         font-size: 1.5rem;
         margin-top: 1rem;
     }
 }
 
 @media (max-width: 1120px) {
-    #silverRate, #goldRate{
+
+    #silverRate,
+    #goldRate {
         font-size: 1.5rem;
         margin-top: 1rem;
     }
 }
 
 @media (max-width: 992px) {
-    
-    .navbar{
+
+    .navbar {
         padding-right: 1rem !important;
         padding-left: 1rem !important;
     }
@@ -1022,7 +1037,7 @@ div h5 {
     .navbar-toggler {
         font-size: 1.5rem;
     }
-    
+
     .carasoleheading {
         font-size: 3rem !important;
     }
@@ -1034,12 +1049,13 @@ div h5 {
         margin-right: 1.5rem;
     }
 
-    .carousel-caption a{
+    .carousel-caption a {
         font-size: 1.2rem;
         width: 23%;
     }
 
-    .carousel-control-prev, .carousel-control-next {
+    .carousel-control-prev,
+    .carousel-control-next {
         width: 7%;
     }
 }
@@ -1049,7 +1065,7 @@ div h5 {
         display: none;
     }
 
-    .navbar{
+    .navbar {
         padding-right: 1rem !important;
         padding-left: 1rem !important;
     }
@@ -1061,7 +1077,7 @@ div h5 {
     .navbar-toggler {
         font-size: 1.5rem;
     }
-    
+
     .carasoleheading {
         font-size: 1.3rem !important;
     }
@@ -1071,15 +1087,16 @@ div h5 {
         margin-top: 2rem;
     }
 
-    .carousel-caption a{
+    .carousel-caption a {
         font-size: 1rem;
         width: 30%;
     }
 
-    .carousel-control-prev, .carousel-control-next {
+    .carousel-control-prev,
+    .carousel-control-next {
         width: 7%;
     }
-    
+
 }
 
 @media (max-width: 768px) {
@@ -1087,7 +1104,7 @@ div h5 {
         margin-bottom: 45px;
     }
 
-    .navbar{
+    .navbar {
         padding-right: 1rem !important;
         padding-left: 1rem !important;
     }
@@ -1099,7 +1116,7 @@ div h5 {
     .navbar-toggler {
         font-size: 1.5rem;
     }
-    
+
     .carasoleheading {
         font-size: 2rem !important;
     }
@@ -1111,12 +1128,13 @@ div h5 {
         margin-right: 1rem;
     }
 
-    .carousel-caption a{
+    .carousel-caption a {
         font-size: 1rem;
         width: 20%;
     }
 
-    .carousel-control-prev, .carousel-control-next {
+    .carousel-control-prev,
+    .carousel-control-next {
         width: 7%;
     }
 }
@@ -1126,7 +1144,7 @@ div h5 {
         display: none;
     }
 
-    .navbar{
+    .navbar {
         padding-right: 1rem !important;
         padding-left: 1rem !important;
     }
@@ -1138,7 +1156,7 @@ div h5 {
     .navbar-toggler {
         font-size: 1.5rem;
     }
-    
+
     .carasoleheading {
         font-size: 1.3rem !important;
     }
@@ -1148,19 +1166,20 @@ div h5 {
         margin-top: 2rem;
     }
 
-    .carousel-caption a{
+    .carousel-caption a {
         font-size: 1rem;
         width: 30%;
     }
 
-    .carousel-control-prev, .carousel-control-next {
+    .carousel-control-prev,
+    .carousel-control-next {
         width: 7%;
     }
 
 }
 
 @media (max-width: 480px) {
-    .navbar{
+    .navbar {
         padding-right: 1rem !important;
         padding-left: 1rem !important;
     }
@@ -1172,22 +1191,23 @@ div h5 {
     .navbar-toggler {
         font-size: 1.5rem;
     }
-    
+
     .carasoleheading {
         font-size: 1rem !important;
         margin-top: 0.5rem;
     }
 
-    .carousel-caption p{
+    .carousel-caption p {
         font-size: 0.7rem;
     }
 
-    .carousel-caption a{
+    .carousel-caption a {
         font-size: 0.7rem;
         width: 30%;
     }
 
-    .carousel-control-prev, .carousel-control-next {
+    .carousel-control-prev,
+    .carousel-control-next {
         width: 5%;
     }
 }
@@ -1285,22 +1305,26 @@ div h5 {
     line-height: 60px;
     z-index: 9999;
     text-align: center;
-    background: linear-gradient(145deg, #25D366, #128C7E); /* WhatsApp green gradient */
+    background: linear-gradient(145deg, #25D366, #128C7E);
+    /* WhatsApp green gradient */
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
     cursor: pointer;
 }
 
-.fixed-tel.visible{
-    right: 20px; /* Visible when scrolled, moves to its position */
+.fixed-tel.visible {
+    right: 20px;
+    /* Visible when scrolled, moves to its position */
     opacity: 1;
     visibility: visible;
 }
 
 .fixed-tel:hover {
-    transform: scale(1.1); /* Enlarges on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Adds a deeper shadow on hover */
+    transform: scale(1.1);
+    /* Enlarges on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    /* Adds a deeper shadow on hover */
 }
 
 .fixed-tel:before {
@@ -1321,19 +1345,23 @@ div h5 {
     z-index: 2;
     position: relative;
     color: #fff;
-    font-size: 1.8rem; /* Slightly bigger icon size */
+    font-size: 1.8rem;
+    /* Slightly bigger icon size */
 }
 
 .fixed-whatsapp {
-    bottom: 90px; /* Moves the WhatsApp button higher */
-    background: linear-gradient(145deg, #25D366, #128C7E); /* WhatsApp green gradient */
+    bottom: 90px;
+    /* Moves the WhatsApp button higher */
+    background: linear-gradient(145deg, #25D366, #128C7E);
+    /* WhatsApp green gradient */
     transition: all 0.3s ease;
     border-radius: 50%;
 }
 
 .fixed-whatsapp:hover {
     transform: scale(1.1);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Same hover effects for consistency */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    /* Same hover effects for consistency */
 }
 
 .fixed-whatsapp:before {
@@ -1351,16 +1379,22 @@ div h5 {
 
 /* Bounce animation to make it more engaging */
 @keyframes bounce {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
+
     50% {
-        transform: translateY(-5px); /* Creates the bounce effect */
+        transform: translateY(-5px);
+        /* Creates the bounce effect */
     }
 }
 
-.fixed-tel, .fixed-whatsapp {
-    animation: bounce 2s infinite ease-in-out; /* Apply bounce animation */
+.fixed-tel,
+.fixed-whatsapp {
+    animation: bounce 2s infinite ease-in-out;
+    /* Apply bounce animation */
 }
 
 
@@ -1375,7 +1409,8 @@ div h5 {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1000;
-    overflow-y: auto; /* To handle scrolling for small screens */
+    overflow-y: auto;
+    /* To handle scrolling for small screens */
     color: var(--color-text-dark);
 }
 
@@ -1387,10 +1422,13 @@ div h5 {
     background-color: white;
     padding: 20px;
     border-radius: 5px;
-    width: 90%; /* Default width for smaller screens */
-    max-width: 500px; /* Max width for larger screens */
+    width: 90%;
+    /* Default width for smaller screens */
+    max-width: 500px;
+    /* Max width for larger screens */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden; /* To ensure content does not overflow */
+    overflow: hidden;
+    /* To ensure content does not overflow */
     border: 1px solid var(--color-primary);
 }
 
@@ -1472,5 +1510,104 @@ div h5 {
     .close-btn {
         font-size: 20px;
         padding: 4px;
+    }
+}
+
+/* Unique CSS for Technology Section */
+.technology-section {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.technology-title {
+    text-align: center;
+    font-size: 2.5em;
+    color: #FB5607;
+    margin-bottom: 40px;
+}
+
+.technology-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.technology-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.alt-bg {
+    background-color: #f7f7f7;
+}
+
+.technology-row:nth-child(odd) .text-content {
+    order: 2;
+    /* Places image on the left */
+}
+
+.technology-image {
+    width: 40%;
+    max-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.text-content {
+    width: 60%;
+}
+
+.text-content h3 {
+    color: #060842;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.text-content p {
+    font-size: 1em;
+    margin: 8px 0;
+}
+
+.technology-info {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: var(--color-bg-light);
+    border-radius: 8px;
+    border: 1px solid var(--color-primary);
+}
+
+.technology-info h3 {
+    color: var(--color-secondary);
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+.technology-info p,
+.technology-info ul {
+    color: var(--color-text-dark);
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.technology-info ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .technology-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .technology-image,
+    .text-content {
+        width: 100%;
     }
 }

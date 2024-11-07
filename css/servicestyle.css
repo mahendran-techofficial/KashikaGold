@@ -66,7 +66,7 @@ background: var(--color-bg-light);
 }
 
 .servicesecionbottom{
-    background: var(--color-bg-gradient); 
+    background: var(--color-bg-sectioncontact); 
 }
 
 .service-single-wpr {
@@ -75,6 +75,16 @@ background: var(--color-bg-light);
 
 .service-single-wpr img,
 .service-element img {
+    max-width: 100%;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+    height: auto;
+}
+
+.sidebar .sidebar-img img{
     max-width: 100%;
     -webkit-transition: all 0.3s ease-out 0s;
     -moz-transition: all 0.3s ease-out 0s;
@@ -320,6 +330,13 @@ ul.service-single-list i {
     margin-right: 8px;
 }
 
+.payment-section .service-single-list li{
+    color: var(--color-text-dark) !important;
+}
+.genuine-buyers-section .service-single-list li {
+    color: var(--color-text-dark) !important;
+}
+
 .procedure-card {
     background-color: #f8f9fa;
     padding: 20px;
@@ -423,6 +440,11 @@ ul.service-single-list i {
 
 .genuine-buyers-section{
     margin-bottom: 2rem !important;
+    color: var(--color-text-dark);
+}
+
+.genuine-buyers-section i{
+    padding-right: 1rem;
 }
 
 /* Diamond Jewellery Section Styles */
