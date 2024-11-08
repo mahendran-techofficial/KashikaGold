@@ -322,7 +322,7 @@ ul.service-single-list {
 
 ul.service-single-list li {
     padding: 10px 0;
-    font-size: 18px;
+    /* font-size: 18px; */
 }
 
 ul.service-single-list i {
